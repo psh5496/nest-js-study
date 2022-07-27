@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import Joi from 'joi';
 import process from 'process';
 import { AppController } from './app.controller';
+import { Movie } from './movies/entities/movies.entity';
 import { MoviesModule } from './movies/movies.module';
 
 @Module({
@@ -30,6 +31,7 @@ import { MoviesModule } from './movies/movies.module';
       database: process.env.DB_NAME,
       synchronize: process.env.NODE_ENV !== 'prod',
       logging: true,
+      entities: [Movie],
     }),
     MoviesModule,
   ],
