@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import Joi from 'joi';
-import process, { env } from 'process';
+import process from 'process';
 import { AppController } from './app.controller';
 import { MoviesModule } from './movies/movies.module';
 
