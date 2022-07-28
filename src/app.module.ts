@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import Joi from 'joi';
-import process from 'process';
+import * as Joi from 'joi';
 import { AppController } from './app.controller';
 import { Movie } from './movies/entities/movies.entity';
 import { MoviesModule } from './movies/movies.module';
