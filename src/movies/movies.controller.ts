@@ -17,12 +17,12 @@ export class MoviesController {
   constructor(private readonly movieService: MoviesService) {}
 
   @Get()
-  getAll(): Movie[] {
+  getAll(): Promise<Movie[]> {
     return this.movieService.getAll();
   }
 
   @Get(':id')
-  getOne(@Param('id') id: number): Movie {
+  getOne(@Param('id') id: number): Promise<Movie> {
     return this.movieService.getOne(id);
   }
 
